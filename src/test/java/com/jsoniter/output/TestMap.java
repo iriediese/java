@@ -49,9 +49,9 @@ public class TestMap extends TestCase {
     }
 
     public void test_value_is_null() throws IOException {
-        HashMap<String, int[]> obj = new HashMap<String, int[]>();
+        HashMap<String, Integer> obj = new HashMap<String, Integer>();
         obj.put("hello", null);
-        stream.writeVal(new TypeLiteral<Map<String, int[]>>() {
+        stream.writeVal(new TypeLiteral<Map<String, Integer>>() {
         }, obj);
         stream.close();
         assertEquals("{\"hello\":null}", baos.toString());
